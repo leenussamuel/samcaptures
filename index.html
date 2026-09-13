@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LENUS SAMUEL — Visual Creator</title>
+<meta name="description" content="LENUS SAMUEL — Visual Creator, Videographer, Video Editor and Reel Creator.">
+<style>
+:root{
+  --bg:#090909; --panel:#111111; --text:#f4f1ea; --muted:#9b9a96;
+  --line:rgba(255,255,255,.11); --accent:#d8ff55;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;width:100%;z-index:20;padding:22px 0;mix-blend-mode:normal;background:linear-gradient(180deg,rgba(9,9,9,.8),transparent)}
+.navin{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:18px}
+.navlinks{display:flex;gap:26px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#bdbbb6}
+.navlinks a:hover{color:var(--text)}
+.hero{min-height:100svh;display:grid;align-items:end;padding:130px 0 58px;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 38%,rgba(216,255,85,.09),transparent 28%),linear-gradient(115deg,#090909 25%,rgba(9,9,9,.72),rgba(9,9,9,.15));pointer-events:none}
+.hero-media{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-media .fakevideo{width:100%;height:100%;background:
+linear-gradient(120deg,rgba(255,255,255,.06),transparent 35%),
+radial-gradient(circle at 75% 45%,rgba(255,255,255,.12),transparent 17%),
+linear-gradient(135deg,#151515,#292929 45%,#0b0b0b);
+filter:saturate(.65)}
+.hero-media .fakevideo:after{content:"VIDEO PREVIEW";position:absolute;right:6%;top:44%;font-size:11px;letter-spacing:.25em;color:rgba(255,255,255,.22)}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);margin-bottom:20px}
+h1{font-size:clamp(62px,12vw,156px);line-height:.82;letter-spacing:-.075em;font-weight:800;max-width:900px}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:42px}
+.hero-copy{max-width:520px;color:#c6c4bf;font-size:18px;line-height:1.55}
+.cta{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line);padding:14px 18px;border-radius:100px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;white-space:nowrap}
+.cta:hover{border-color:rgba(216,255,85,.6);color:var(--accent)}
+.scroll{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#777;display:flex;gap:10px;align-items:center}
+section{padding:120px 0}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:start;margin-bottom:58px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent)}
+.section-title{font-size:clamp(38px,6vw,76px);line-height:.95;letter-spacing:-.055em;max-width:720px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about-text{font-size:clamp(22px,3vw,38px);line-height:1.18;letter-spacing:-.035em}
+.about-text span{color:#777}
+.skills{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.skill{padding:18px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between}
+.skill b{font-weight:500}.skill small{color:#666}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0;white-space:nowrap}
+.marquee-track{display:inline-block;animation:move 18s linear infinite;font-size:clamp(30px,5vw,70px);font-weight:700;letter-spacing:-.06em}
+.marquee i{font-style:normal;color:var(--accent);padding:0 24px}
+@keyframes move{to{transform:translateX(-50%)}}
+.work{background:#0c0c0c}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.project{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.project-media{width:100%;aspect-ratio:9/16;background:#0a0a0a;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.08),transparent 35%),linear-gradient(135deg,#090909,#171717 50%,#090909)}
+.project-media:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 65% 40%,rgba(255,255,255,.12),transparent 22%),
+linear-gradient(125deg,#161616,#2a2a2a,#101010)}
+.project:nth-child(2) .project-media:before{background:
+radial-gradient(circle at 35% 45%,rgba(216,255,85,.11),transparent 24%),
+linear-gradient(125deg,#0d0d0d,#252525,#111)}
+.project:nth-child(3) .project-media:before{background:
+radial-gradient(circle at 72% 55%,rgba(255,255,255,.13),transparent 20%),
+linear-gradient(125deg,#202020,#111,#2b2b2b)}
+.preview{position:absolute;left:22px;top:20px;z-index:3;border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:8px 11px;font-size:9px;letter-spacing:.16em;color:#aaa;text-transform:uppercase}
+.project-info{padding:23px 24px 26px;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.project-num{font-size:11px;color:#666;margin-bottom:8px}
+.project h3{font-size:clamp(26px,4vw,48px);letter-spacing:-.045em}
+.project p{font-size:12px;color:#8d8b87;margin-top:6px}
+.arrow{font-size:22px;color:var(--accent)}
+.contact{min-height:70svh;display:flex;flex-direction:column;justify-content:space-between}
+.contact-title{font-size:clamp(52px,10vw,125px);line-height:.86;letter-spacing:-.07em;max-width:850px}
+.contact-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;border-top:1px solid var(--line);padding-top:24px}
+.contact-links{display:flex;gap:24px;flex-wrap:wrap;font-size:13px}
+.contact-links a:hover{color:var(--accent)}
+footer{padding:25px 0 35px;color:#666;font-size:10px;text-transform:uppercase;letter-spacing:.15em;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(22px);animation:reveal .9s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
+@keyframes reveal{to{opacity:1;transform:none}}
+@media(max-width:760px){
+ .wrap{width:min(100% - 28px,1180px)}
+ nav{padding:18px 0}.navlinks{gap:13px;font-size:9px}
+ .hero{padding:110px 0 35px}.hero-bottom{align-items:start;flex-direction:column}
+ .hero-copy{font-size:16px}.scroll{display:none}
+ section{padding:82px 0}.section-head{flex-direction:column;margin-bottom:38px}
+ .about-grid{grid-template-columns:1fr;gap:45px}.skills{grid-template-columns:1fr}
+ .projects{grid-template-columns:1fr}.project-media{aspect-ratio:9/16}.drive-video{height:100%;max-height:100%}.project-info{padding:18px}
+ .contact{min-height:65svh}.contact-bottom{align-items:start;flex-direction:column}
+ footer{font-size:8px}
+}
+
+.drive-video{position:absolute;inset:0;width:100%;height:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;display:block;z-index:1;box-shadow:0 0 50px rgba(0,0,0,.55)}
+.drive-video{position:absolute;inset:0;width:100%;height:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;display:block;z-index:1;box-shadow:0 0 50px rgba(0,0,0,.55)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a class="logo" href="#top">LS.</a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-media"><div class="fakevideo"></div></div>
+  <div class="wrap">
+    <div class="kicker reveal">Visual Creator / Videographer / Editor</div>
+    <h1 class="reveal d1">LENUS<br>SAMUEL</h1>
+    <div class="hero-bottom">
+      <p class="hero-copy reveal d2">I capture moments, shape them into stories, and make content worth replaying.</p>
+      <a class="cta reveal d3" href="#work">Explore my work <span>↘</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">VIDEOGRAPHY <i>✦</i> EDITING <i>✦</i> REELS <i>✦</i> VISUALS <i>✦</i> VIDEOGRAPHY <i>✦</i> EDITING <i>✦</i> REELS <i>✦</i> VISUALS <i>✦</i></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">01 / About</div>
+      <div class="section-title">A creator who likes visuals with a little character.</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">I’m <span>LENUS SAMUEL</span> — a visual creator focused on videography, editing and short-form content. My approach is cinematic, energetic, raw and versatile.</div>
+      <div class="skills">
+        <div class="skill"><b>Mobile Videography</b><small>01</small></div>
+        <div class="skill"><b>Video Editing</b><small>02</small></div>
+        <div class="skill"><b>Instagram Reels</b><small>03</small></div>
+        <div class="skill"><b>Event Content</b><small>04</small></div>
+        <div class="skill"><b>Cinematic Visuals</b><small>05</small></div>
+        <div class="skill"><b>Short-form Storytelling</b><small>06</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">02 / Selected Work</div>
+      <div class="section-title">A few moments I’ve had the chance to create.</div>
+    </div>
+    <div class="projects">
+      <article class="project">
+        <div class="project-media">
+          <video class="drive-video" autoplay muted loop playsinline preload="metadata" poster="reception-poster.jpg"><source src="reception.mp4" type="video/mp4"></video>
+          <span class="preview">Reception · Video preview</span>
+        </div>
+        <div class="project-info"><div><div class="project-num">01</div><h3>Reception</h3><p>Event / Cinematic Content</p></div><div class="arrow">↗</div></div>
+      </article>
+      <article class="project">
+        <div class="project-media">
+          <video class="drive-video" autoplay muted loop playsinline preload="metadata" poster="cafe-mico-poster.jpg">
+            <source src="cafe-mico.mp4" type="video/mp4">
+          </video>
+          <span class="preview">Cafe mico · Video preview</span>
+        </div>
+        <div class="project-info"><div><div class="project-num">02</div><h3>Cafe mico</h3><p>Brand / Promotional Content</p></div><div class="arrow">↗</div></div>
+      </article>
+      <article class="project">
+        <div class="project-media">
+          <video class="drive-video" autoplay muted loop playsinline preload="metadata" poster="raftaar-tree-stories-poster.jpg">
+            <source src="raftaar-tree-stories-v2.mp4" type="video/mp4">
+          </video>
+          <span class="preview">Band raftaar in the Tree stories · Video preview</span>
+        </div>
+        <div class="project-info"><div><div class="project-num">03</div><h3>Band raftaar in the Tree stories</h3><p>Music Event / Live Performance</p></div><div class="arrow">↗</div></div>
+      </article>
+</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow">03 / Contact</div>
+    <div class="contact-title">Got a moment worth capturing?</div>
+    <div class="contact-bottom">
+      <div class="contact-links">
+        <a href="https://www.instagram.com/leenus_samuel/" target="_blank" rel="noopener" aria-label="Instagram">Instagram ↗</a>
+        <a href="https://wa.me/919177148980" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp ↗</a>
+        <a href="mailto:samuelleenus305@gmail.com" aria-label="Email">Gmail ↗</a>
+      </div>
+      <a class="cta" href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 LENUS SAMUEL</span><span>Made for the moments.</span>
+</footer>
+</body>
+</html>
