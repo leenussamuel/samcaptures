@@ -92,6 +92,18 @@ footer{padding:25px 0 35px;color:#666;font-size:10px;text-transform:uppercase;le
 
 .drive-video{position:absolute;inset:0;width:100%;height:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;display:block;z-index:1;box-shadow:0 0 50px rgba(0,0,0,.55)}
 .drive-video{position:absolute;inset:0;width:100%;height:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;display:block;z-index:1;box-shadow:0 0 50px rgba(0,0,0,.55)}
+
+.full-collection{position:relative;overflow:hidden;background:#0a0a0a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.full-collection:before{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(216,255,85,.13),transparent 68%);pointer-events:none}
+.collection-card{position:relative;border:1px solid var(--line);border-radius:24px;padding:clamp(30px,5vw,62px);background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.012));display:flex;justify-content:space-between;align-items:end;gap:40px;overflow:hidden}
+.collection-card:after{content:"ALL WORK";position:absolute;right:-18px;bottom:-42px;font-size:clamp(80px,15vw,190px);font-weight:800;letter-spacing:-.08em;color:rgba(255,255,255,.025);pointer-events:none}
+.collection-copy{position:relative;z-index:1;max-width:720px}
+.collection-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);margin-bottom:18px}
+.collection-title{font-size:clamp(38px,7vw,82px);line-height:.9;letter-spacing:-.06em;margin-bottom:18px}
+.collection-text{max-width:560px;color:#9b9a96;font-size:16px;line-height:1.6}
+.collection-btn{position:relative;z-index:2;display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(216,255,85,.45);background:var(--accent);color:#090909;padding:16px 20px;border-radius:100px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;white-space:nowrap;transition:transform .25s ease,box-shadow .25s ease}
+.collection-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(216,255,85,.12)}
+@media(max-width:760px){.collection-card{align-items:start;flex-direction:column;gap:28px}.collection-btn{width:100%;justify-content:center}}
 </style>
 </head>
 <body>
@@ -174,6 +186,19 @@ footer{padding:25px 0 35px;color:#666;font-size:10px;text-transform:uppercase;le
         <div class="project-info"><div><div class="project-num">03</div><h3>Band raftaar in the Tree stories</h3><p>Music Event / Live Performance</p></div><div class="arrow">↗</div></div>
       </article>
 </div>
+  </div>
+</section>
+
+<section class="full-collection">
+  <div class="wrap">
+    <div class="collection-card">
+      <div class="collection-copy">
+        <div class="collection-kicker">The Full Collection</div>
+        <div class="collection-title">Not everything fits on a portfolio page.</div>
+        <p class="collection-text">Explore the complete collection of projects, edits, reels and visual work — all in one place.</p>
+      </div>
+      <a class="collection-btn" href="https://drive.google.com/drive/folders/1-z5n0giF9FTTC_sDWglfx4I4DQ9-4iw3?usp=sharing" target="_blank" rel="noopener">Explore all my work <span>↗</span></a>
+    </div>
   </div>
 </section>
 
